@@ -23,20 +23,21 @@ final class MainScreenViewModel {
     }
 
     private func add3Ordes(for id: UInt) {
+        let state = Main.Order.State.getRandom()
         testOrders.add(order: Main.Order(
                         lastModified: Date(timeInterval: Double(id), since: Date()),
                         seat: (id, letters[id * 2]),
-                        state: Main.Order.State.getRandom(),
+                        state: state,
                         price: (Decimal(id), "$")))
         testOrders.add(order: Main.Order(
                         lastModified: Date(timeInterval: Double(id), since: Date()),
                         seat: (id, letters[id * 2 + 1]),
-                        state: Main.Order.State.getRandom(),
+                        state: state,
                         price: (Decimal(id), "$")))
         testOrders.add(order: Main.Order(
                         lastModified: Date(timeInterval: Double(id + 1), since: Date()),
                         seat: (id, letters[id * 2 + 1]),
-                        state: Main.Order.State.getRandom(),
+                        state: state,
                         price: (Decimal(id), "$")))    }
 }
 
