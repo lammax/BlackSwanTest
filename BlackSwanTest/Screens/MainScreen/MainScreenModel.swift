@@ -18,7 +18,7 @@ enum Main {
             }
             
             static func getRandom() -> State {
-                return State.allCases[Int.random(in: 0...3)]
+                return State.allCases[Int.random(in: 0...State.allCases.count-1)]
             }
         }
         
