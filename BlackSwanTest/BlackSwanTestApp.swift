@@ -11,7 +11,7 @@ import SwiftUI
 struct BlackSwanTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreenView().environmentObject(TestAccessOrder.shared)
         }
     }
 }
