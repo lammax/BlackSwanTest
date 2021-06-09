@@ -37,7 +37,7 @@ struct MainScreenView: View {
             .padding()
             
             
-            ScrollView(.vertical, showsIndicators: false, content: {
+            ScrollView(.vertical, showsIndicators: true, content: {
                 ForEach(testClass.orders) { order in
                     Button(action: {
                         if counter > .zero {
@@ -46,7 +46,7 @@ struct MainScreenView: View {
                         }
                     }, label: {
                         Text(order.info)
-                            .font(.body)
+                            .font(.title3)
                             .foregroundColor(.black)
                     })
                     
