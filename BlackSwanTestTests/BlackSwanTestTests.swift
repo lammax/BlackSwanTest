@@ -18,7 +18,7 @@ class BlackSwanTestTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testCount() throws {
         let testAccess = TestAccessOrder.shared
         
         let id: UInt = 10
@@ -29,5 +29,25 @@ class BlackSwanTestTests: XCTestCase {
         
         XCTAssertTrue(testAccess.orders.count == 3, "Wrong count!")
     }
+
+    func testDate() throws {
+            
+        let dateStr = Date().toString()
+        
+        XCTAssertTrue(dateStr.count == 8, "Wrong count!")
+    }
+
+    func testFailure() throws {
+        let testAccess = TestAccessOrder.shared
+        
+        let id: UInt = 10
+        
+        let viewModel: MainScreenViewModelDelegate = MainScreenViewModel()
+        
+        viewModel.addOrders(for: id)
+        
+        XCTAssertFalse(testAccess.orders.count != 6, "Wrong count!")
+    }
+
 
 }

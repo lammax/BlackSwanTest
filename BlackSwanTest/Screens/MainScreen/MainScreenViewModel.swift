@@ -14,14 +14,14 @@ protocol MainScreenViewModelDelegate: AnyObject {
 
 final class MainScreenViewModel {
     
-    //MARK: Test cases area
     private let testOrders = TestAccessOrder.shared
     
     private let letters: String = "abcdefghijklmnopqrstuvwxyz"
     
     init() {
     }
-
+    
+    //MARK: Test cases area
     private func add3Ordes(for id: UInt) {
         let state = Main.Order.State.getRandom()
         testOrders.add(order: Main.Order(
