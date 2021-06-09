@@ -26,7 +26,7 @@ struct MainScreenView: View {
                     counter += 3
                     viewModel.addOrder(for: counter)
                 }, label: {
-                    Text("Add order")
+                    Text("Add 3 orders")
                         .font(.title3)
                         .foregroundColor(.black)
                         .padding()
