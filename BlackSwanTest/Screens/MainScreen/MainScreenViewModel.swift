@@ -26,17 +26,17 @@ final class MainScreenViewModel {
         testOrders.add(order: Main.Order(
                         lastModified: Date(timeInterval: Double(id), since: Date()),
                         seat: (id, letters[id * 2]),
-                        state: Main.Order.State.get(by: id),
+                        state: Main.Order.State.getRandom(),
                         price: (Decimal(id), "$")))
         testOrders.add(order: Main.Order(
                         lastModified: Date(timeInterval: Double(id), since: Date()),
                         seat: (id, letters[id * 2 + 1]),
-                        state: Main.Order.State.get(by: id),
+                        state: Main.Order.State.getRandom(),
                         price: (Decimal(id), "$")))
         testOrders.add(order: Main.Order(
                         lastModified: Date(timeInterval: Double(id + 1), since: Date()),
                         seat: (id, letters[id * 2 + 1]),
-                        state: Main.Order.State.get(by: id),
+                        state: Main.Order.State.getRandom(),
                         price: (Decimal(id), "$")))    }
 }
 

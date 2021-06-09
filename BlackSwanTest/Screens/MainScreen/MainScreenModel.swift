@@ -17,9 +17,8 @@ enum Main {
                 self.rawValue
             }
             
-            static func get(by id: UInt) -> State {
-                let (_, index) = (State.allCases.count-1).quotientAndRemainder(dividingBy: Int(id))
-                return State.allCases[index]
+            static func getRandom() -> State {
+                return State.allCases[Int.random(in: 0...3)]
             }
         }
         
