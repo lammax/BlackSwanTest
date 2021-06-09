@@ -24,7 +24,7 @@ struct MainScreenView: View {
                 
                 Button(action: {
                     counter += 3
-                    viewModel.addOrder(for: counter)
+                    viewModel.addOrders(for: counter)
                 }, label: {
                     Text("Add 3 orders")
                         .font(.title3)

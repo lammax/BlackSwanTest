@@ -8,7 +8,7 @@
 import SwiftUI
 
 protocol MainScreenViewModelDelegate: AnyObject {
-    func addOrder(for id: UInt)
+    func addOrders(for id: UInt)
     func del(order: Main.Order)
 }
 
@@ -42,7 +42,7 @@ final class MainScreenViewModel {
 
 extension MainScreenViewModel: MainScreenViewModelDelegate {
     
-    func addOrder(for id: UInt) {
+    func addOrders(for id: UInt) {
         add3Ordes(for: id)
     }
     
