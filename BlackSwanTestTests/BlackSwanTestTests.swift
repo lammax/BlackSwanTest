@@ -25,7 +25,7 @@ class BlackSwanTestTests: XCTestCase {
         
         let viewModel: MainScreenViewModelDelegate = MainScreenViewModel()
         
-        viewModel.addOrder(for: id)
+        viewModel.addOrders(for: id)
         
         XCTAssertTrue(testAccess.orders.count == 3, "Wrong count!")
     }
