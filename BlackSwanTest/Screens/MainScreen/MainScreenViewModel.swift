@@ -38,7 +38,8 @@ final class MainScreenViewModel {
                         lastModified: Date(timeInterval: Double(id + 1), since: Date()),
                         seat: (id, letters[id * 2 + 1]),
                         state: state,
-                        price: (Decimal(id), "$")))    }
+                        price: (Decimal(id), "$")))
+    }
 }
 
 extension MainScreenViewModel: MainScreenViewModelDelegate {
